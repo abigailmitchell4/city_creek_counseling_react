@@ -4,7 +4,7 @@ const Contact = () => (
 
 <div className='main-contact-container flex-c w'>
   <div className='heading-width'>
-    <h2 className='in-touch-header gray contact-header'>
+    <h2 className='lg-margin gray contact-header'>
       Get in Touch
     </h2>
   </div>
@@ -40,8 +40,8 @@ const Contact = () => (
               </svg>
             <div className='flex-c location'>
               <p>We are located in downtown Salt Lake City</p>
-              <p>124 South 600 East, Suite 200</p>
-              <p>Salt Lake City, Utah 84102</p>
+              <p className='no-m'>124 South 600 East, Suite 200</p>
+              <p className='no-m'>Salt Lake City, Utah 84102</p>
             </div>
           </div>
         </div>

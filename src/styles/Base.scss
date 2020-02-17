@@ -101,13 +101,10 @@
   }
   .b2-btn:hover {
     border-color: #fff;
+    color: #fff;
     background-color: #11909e;
     transition: $animate;
     transition-duration: 0.3s;
-  
-    a {
-      color: #fff;
-    }
   }
   
   .g,
@@ -139,10 +136,6 @@
     transition: $animate;
     transition-duration: 0.3s;
     color: #fff;
-  
-    a {
-      color: #fff;
-    }
   }
   
   
@@ -150,7 +143,7 @@
     color: var(--gary-main);
   }
   .margin-top-1 {
-    margin: 1rem 0;
+    margin-top: 1rem;
   }
   .width-90 {
     width: 90%;
@@ -162,6 +155,9 @@
     @include respond(tab-port) {
       width: 85%;
     }
+  }
+  .width-fit {
+    width: fit-content;
   }
   
   ///////////////////
@@ -181,6 +177,11 @@
     @include respond(phone) {
       display: none;
     }
+    a,
+    a:visited {  
+      color:#0f919e;
+      text-decoration: none;
+    }
   
   }
   .ul {
@@ -194,7 +195,6 @@
   }
   
   a {
-    color:#0f919e;
     font-size: 1rem;
     text-transform: uppercase;
     text-decoration: none;
@@ -206,10 +206,7 @@
   a:link {
     text-decoration: none;
   }
-  a:visited {  
-    color:#0f919e;
-    text-decoration: none;
-  }
+  
   .home-icon {
     fill: #0f919e;
   
@@ -283,20 +280,23 @@
     }
   }
   .nav-menu-mobile {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    height: 320px;
-    position: fixed;
-    background-color: #fff;
-    width: 100%;
-  
-    .ul {
+    display: none;
+    @include respond(phone) {
+      display: flex;
       flex-direction: column;
-      justify-content: space-around;
-      height: 100%;
-      padding: 1rem;
-      font-weight: 300;
+      flex: 1 1 auto;
+      height: 320px;
+      position: fixed;
+      background-color: #fff;
+      width: 100%;
+    
+      .ul {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        padding: 1rem;
+        font-weight: 400;
+      }
     }
   }
   .close:after {
@@ -334,23 +334,23 @@
     font-family: 'Lancelot', sans-serif;
     margin: 1rem 1rem 5rem;
     letter-spacing: 4px;
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
     width: fit-content;
   
     @include respond(big-desk) {
-      font-size: 7rem;
+      font-size: 6rem;
     }
     @include respond(tab-land) {
       font-size: 5.5rem;
     }
     @include respond(tab-port) {
       font-size: 4.5rem;
-      margin: 5rem 1rem;
+      margin: 4rem 1rem;
     }
     @include respond(phone) {
       font-size: 4rem;
-      margin: 5rem 0.7rem;
+      margin: 4rem 0.7rem;
     }
   }
   .heading-width {
@@ -360,6 +360,7 @@
   }
   h2 {
     width: 100%;
+    font-weight: 300;
   }
   h2, 
   button {
@@ -372,7 +373,6 @@
     letter-spacing: 2px;
     margin: 2rem 0;
     text-align: center;
-    font-weight: 300;
     border-bottom-style: solid;
     padding: 10px 20px;
     border-width: 1px;
@@ -388,15 +388,18 @@
     margin: 2rem 0 1rem;
     text-align: center;
     font-size: 2.2rem;
-    font-weight: 200;
+    font-weight: 300;
     width: fit-content;
+  }
+  .in-touch-header {
+    margin: 2rem 0 1rem;
   }
   
   .intro-p {
     line-height: 1.5;
     letter-spacing: 1px;
     width: 100%;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.2rem;
   
     .ph-1 {
@@ -446,6 +449,9 @@
   .image-container {
     margin: 3rem;
   }
+  .image-container-sm {
+    margin: 1rem 2rem;
+  }
   .diana-img {
     width: 100%
   }
@@ -455,18 +461,26 @@
   //////////////////
   //// ABOUT /////
   
-  .margin {
-    margin: 5rem;
+  .margin-bot {
+    margin-bottom: 5rem;
   }
-  
+  span {
+    margin: 0 0.4rem;
+  }
+
+  .insp-span {
+    text-transform: none;
+    font-size: inherit;
+    font-weight: 700;
+  }
   /////////////////////
   ///// CONTACT /////
   
-  .in-touch-header {
-    margin-top: 6rem;
+  .lg-margin {
+    margin-top: 5rem;
   
     @include respond(tab-small) {
-      margin-top: 4rem;
+      margin-top: 3rem;
     }
   }
   
@@ -478,7 +492,7 @@
   }
   
   .contact-container { 
-    margin: 2rem;
+    margin: 1rem 0 2rem;
     max-width: 700px; 
   
     p {
@@ -487,6 +501,9 @@
   
     p:link, p:visited {
       color: inherit;
+    }
+    .no-m {
+      margin: 0;
     }
   }
   .p-1 {
@@ -531,7 +548,7 @@
   }
   
   .location {
-    margin: 1rem 0;
+    margin: 1rem 2rem;
     align-items: flex-start;
   }
   
@@ -559,3 +576,21 @@
   .w {
     background-color: #fff;
   }
+
+
+  /////////////////
+  // ABOUT PAGE ///
+  .influence-list {
+    margin: 1rem;
+  }
+
+
+////////////////// 
+///// FOOTER ///// 
+.footer {
+  width: 100%;
+}
+
+.footer-location {
+  padding: 1.5rem;
+}

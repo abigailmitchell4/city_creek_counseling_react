@@ -25,6 +25,13 @@ const Navbar = () => (
         <NavLink
           className='hover underline li'
           exact
+          to='/services'
+        >
+          Services
+        </NavLink>
+        <NavLink
+          className='hover underline li'
+          exact
           to='/men_healing'
         >
           Men Healing
@@ -34,7 +41,7 @@ const Navbar = () => (
           exact
           to='/inspirations'
         >
-          Instpirations 
+          Inspirations 
         </NavLink>
         <NavLink 
           className='hover underline li'
