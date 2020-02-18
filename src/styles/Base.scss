@@ -1,6 +1,7 @@
 :root {
   --gary-main: #6f6f6f;
-    
+  --blue-main: #11909e;
+  --green-main: #7fbda8;
 }
 #root {
   display: flex;
@@ -79,60 +80,60 @@
   // GENERAL CLASSES //
   .b,
   .b-btn {
-    background-color: #11909e;
+    background-color: var(--blue-main);
     color: #fff;
   }
   .b-btn:hover {
-    border-color: #11909e;
+    border-color: var(--blue-main);
     background-color: #fff;
     transition: $animate;
     transition-duration: 0.3s;
   
     a {
-      color: #11909e;
+      color: var(--blue-main);
     }
   }
   
   
   .b2,
   .b2-btn {
-    color: #0f919e;
+    color: var(--blue-main);
     background-color: #fff;
   }
   .b2-btn:hover {
     border-color: #fff;
     color: #fff;
-    background-color: #11909e;
+    background-color: var(--blue-main);
     transition: $animate;
     transition-duration: 0.3s;
   }
   
   .g,
   .g-btn {
-    background-color: #90baac;
+    background-color: var(--green-main);
     color: #fff;
   }
   .g-btn:hover {
-    border-color: #90baac;
+    border-color: var(--green-main);
     background-color: #fff;
     transition: $animate;
     transition-duration: 0.3s;
   
     a {
-      color: #90baac;
+      color: var(--green-main);
     }
   }
   
   .g2,
   .g2-btn {
     background-color: #fff;
-    color: #90baac;
-    fill: #90baac;
+    color: var(--green-main);
+    fill: var(--green-main);
   }
   
   .g2-btn:hover {
     border-color: #fff;
-    background-color: #90baac;
+    background-color: var(--green-main);
     transition: $animate;
     transition-duration: 0.3s;
     color: #fff;
@@ -159,6 +160,10 @@
   .width-fit {
     width: fit-content;
   }
+
+ .font-sm {
+    font-size: 1rem;
+  }
   
   ///////////////////
   // NAV MENU //
@@ -179,7 +184,7 @@
     }
     a,
     a:visited {  
-      color:#0f919e;
+      color:var(--blue-main);
       text-decoration: none;
     }
   
@@ -200,7 +205,7 @@
     text-decoration: none;
   
     @include respond(phone) {
-      font-size: 1.7rem;
+      font-size: 1.3rem;
     }
   }
   a:link {
@@ -208,7 +213,7 @@
   }
   
   .home-icon {
-    fill: #0f919e;
+    fill: var(--blue-main);
   
     @include respond(phone) {
       width: 40px;
@@ -230,7 +235,7 @@
       transition: $animate;
       transition-duration: 0.3s;
       opacity: 0;
-      background-color: #0f919e;
+      background-color: var(--blue-main)
     }
     &.underline {
       &:before {
@@ -273,7 +278,7 @@
         margin: 1rem;
         font-size: 1rem;
         font-weight: 400;
-        color: #0f919e;
+        color: var(--blue-main);
         background-color: inherit;
         border-style: solid;
       }
@@ -330,7 +335,7 @@
     align-items: center;
   }
   h1 {
-    color:#0f919e;
+    color:var(--blue-main);
     font-family: 'Lancelot', sans-serif;
     margin: 1rem 1rem 5rem;
     letter-spacing: 4px;
@@ -354,10 +359,12 @@
     }
   }
   .heading-width {
-    width: 300px;
+    min-width: 300px;
     display: flex;
     justify-content: center;
+    flex: 1 1 auto;
   }
+  
   h2 {
     width: 100%;
     font-weight: 300;
@@ -381,6 +388,9 @@
     @include respond(tab-small) {
       font-size: 2rem;
     }
+  }
+  button {
+    font-weight: 600;
   }
   
   h3 {
@@ -435,7 +445,7 @@
   }
   
   .h-margin {
-    margin: 3rem 0 1rem;
+    margin: 2rem 0 1rem;
   }
   .who-header {
     margin: 0 1rem;
@@ -487,13 +497,13 @@
   .main-contact-container {
     margin-top: 2rem;
     width: 100%;
-    background-color: #11909e;
-    color: white;
+    background-color: var(--blue-main);
+    color: #fff;
   }
   
   .contact-container { 
     margin: 1rem 0 2rem;
-    max-width: 700px; 
+    max-width: 740px; 
   
     p {
       margin: 1rem 0;
@@ -542,6 +552,10 @@
       margin-bottom: 2rem;
       display: flex;
     }
+
+    @include respond(phone) {
+      width: fit-content;
+    }
   }
   .contact-btn {
     margin: 2rem 1rem 3rem;
@@ -550,6 +564,13 @@
   .location {
     margin: 1rem 2rem;
     align-items: flex-start;
+
+    @include respond(tab-small) {
+      align-items: center;
+      p {
+        text-align: center;
+      }
+    }
   }
   
   ///////////////////
@@ -566,8 +587,7 @@
   .fill-w {
     fill: #fff;
   }
-  
-  
+
   
   /////////////////////// 
   /////////////////////// 
@@ -580,7 +600,7 @@
 
   /////////////////
   // ABOUT PAGE ///
-  .influence-list {
+  .meta-list {
     margin: 1rem;
   }
 

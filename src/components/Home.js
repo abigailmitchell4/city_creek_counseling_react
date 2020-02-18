@@ -44,7 +44,7 @@ const Home = () => (
         </div>
         <div className='image-container flex-c'>
           <img className='diana-img'src={diana} alt='diana thomas'/>
-          <button className='learn-btn b2 b2-btn'>
+          <button className='learn-btn g2 g2-btn'>
             <NavLink
               exact
               to='/about'

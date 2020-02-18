@@ -42,7 +42,7 @@ const About = () => {
               </p>
             </div>
             <div className='flex-l'>
-              <ul className='influence-list'>
+              <ul className='meta-list'>
                 <li>Feminist-multicultural theory</li>
                 <li>Buddhist philosophies</li>
                 <li>Mindfulness and meditation</li>

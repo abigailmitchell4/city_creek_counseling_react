@@ -11,6 +11,7 @@ const Contact = () => (
   <div className='contact-container flex-r flex-l width-sm'>
       <div className='intro-p flex-c flex-l gray'>
         <p className='p-1 g2'>If you are interested in getting started, let's schedule a consultation. Please reach out through one of the below channels.</p>
+      <div className='flex-c'>
         <div className='contact flex-l flex-r'>
           <div className='contact-meta flex-c flex-l margin-top-1'>
             <div className='flex-r'>
@@ -46,6 +47,7 @@ const Contact = () => (
           </div>
         </div>
       </div>
+    </div>
   </div>
 </div>
 )
